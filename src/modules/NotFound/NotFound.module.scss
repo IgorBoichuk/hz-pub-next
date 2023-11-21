@@ -1,0 +1,134 @@
+@import "../../scss/variables";
+@import "../../scss/fonts";
+
+.section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 150px 50px;
+  overflow: hidden;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url(../../assets//galary/rightglass.png),
+    url(../../assets//galary/leftglass.png);
+  background-repeat: no-repeat;
+  background-position: 0 0, 90% 50px, 55% 180px;
+  background-size: 100% 100%, 150px 150px, 120px 120px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    padding: 150px 50px;
+    background-size: 100% 100%, 250px 250px, 220px 220px;
+    background-position: 0 0, 100% 50px, 55% 180px;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 300px 0;
+    background-size: 100% 100%, 450px 450px, 350px 350px;
+    background-position: 0 0, 90% 100px, 50% 350px;
+  }
+}
+
+.title {
+  font-family: Unbounded, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 130%; /* 20.8px */
+  text-transform: uppercase;
+  color: #fff;
+
+  margin-bottom: 40px;
+}
+
+.description {
+  font-family: Nunito Sans, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 130%; /* 20.8px */
+  color: #cdcdcd;
+
+  width: 70%;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 50%;
+    padding-bottom: 200px;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 50%;
+  }
+}
+
+.linkToHome {
+  position: absolute;
+  z-index: 3;
+  right: 2%;
+  bottom: 0%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 200px;
+  height: 180px;
+
+  text-decoration: none;
+  color: #fff;
+
+  // border: 1px solid white;
+  // border-radius: 100%;
+
+  animation-name: spin;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  @media screen and (min-width: $breakpoint-tablet) {
+    right: 10%;
+    bottom: 10%;
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    right: 25%;
+    bottom: 15%;
+  }
+}
+
+.textSvg {
+  width: 300px;
+  height: 300px;
+}
+
+.cursorSvg {
+  position: absolute;
+
+  width: 88px;
+  height: 88px;
+
+  fill: #ff612f;
+  padding: 0;
+  margin: 0;
+
+  animation-name: spinCur;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinCur {
+  100% {
+    transform: rotate(0deg);
+  }
+
+  0% {
+    transform: rotate(360deg);
+  }
+}

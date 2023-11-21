@@ -1,0 +1,18 @@
+@import "../../../scss/variables.scss";
+
+.container {
+  padding: 0 16px;
+  overflow: hidden;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    min-width: 736px;
+  }
+
+  @media screen and (min-width: $breakpoint-tablet-horizontal) {
+    min-width: 992px;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 1280px;
+  }
+}

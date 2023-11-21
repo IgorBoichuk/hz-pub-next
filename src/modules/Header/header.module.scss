@@ -1,0 +1,105 @@
+@import '../../scss/variables';
+@import '../../scss/fonts';
+
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 9;
+	background-color: hsla(0, 0, 0, 0.8);
+	color: white;
+	border-bottom: 2px solid #282828;
+
+	display: flex;
+	width: 100%;
+
+	@media screen and (min-width: $breakpoint-tablet-horizontal) {
+		justify-content: center;
+	}
+}
+
+.headerwrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	// width: 100%;
+	// margin: 0 auto;
+
+	// margin-left: auto;
+}
+.logolink {
+	width: 100px;
+}
+.logo {
+	display: block;
+	text-decoration: none;
+	width: 80px;
+	@media screen and (min-width: $breakpoint-tablet) {
+		margin-right: 120px;
+	}
+}
+
+.navmenu {
+	display: none;
+
+	@media screen and (min-width: $breakpoint-tablet-horizontal) {
+		display: block;
+	}
+}
+
+.navlink {
+	color: #fff;
+	text-align: center;
+	font-family: Montserrat, sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.5;
+	text-transform: uppercase;
+	text-decoration: none;
+	display: none;
+
+	@media screen and (min-width: $breakpoint-tablet) {
+		display: block;
+		margin-right: 80px;
+	}
+
+	&:hover {
+		color: #ff612f;
+	}
+	&:focus {
+		color: #ff612f;
+	}
+}
+
+.burgerButton {
+	position: absolute;
+	z-index: 4;
+	right: 30px;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: transparent;
+	border: none;
+
+	@media screen and (min-width: $breakpoint-tablet-horizontal) {
+		display: none;
+	}
+}
+
+.menuIconBurger {
+	fill: white;
+	width: 28px;
+	height: 28px;
+	// &:hover {
+	//   fill: #ff612f;
+	// }
+	// &:focus {
+	//   fill: #ff612f;
+	// }
+}
+.menuIconCross {
+	position: absolute;
+	top: -10px;
+	right: 8px;
+	fill: white;
+	width: 24px;
+	height: 24px;
+}

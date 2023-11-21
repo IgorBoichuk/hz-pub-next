@@ -1,0 +1,17 @@
+@import "../../../scss/variables";
+
+.wrapper {
+  // width: 100%;
+  // height: 60px;
+}
+.brokenPaper {
+  width: 100%;
+  height: 40px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    height: 60px;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    height: 80px;
+  }
+}
